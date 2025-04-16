@@ -19,7 +19,7 @@ This Python script scrapes medicine data from Apollo Pharmacy's internal API usi
 
 A CSV file named `scraped_medicines_data.csv` containing data for 70 available medicines.
 
-⚠️ Note on Authorization
+## ⚠️ Note on Authorization
 This scraper uses a temporary local authorization token to access Apollo Pharmacy's internal search API. This token is:
 
 Extracted from the Network tab in browser developer tools while using apollopharmacy.in
