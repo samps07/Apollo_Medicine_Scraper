@@ -36,16 +36,16 @@ while len(all_Medicines)<70:
         break
     for product in fetched_data_json["data"]["products"]:
         #filtering out-of-stock products
-        status = product.get("status", "NA").lower()
+        status = product.get("status", "").lower()
         if status == "out-of-stock":
             continue
         med = {
-            "Name": product.get("name", "NA"),
-            "MRP": product.get("price", "0"),
-            "SellingPrice": product.get("specialPrice", "0"),
-            "Tags": product.get("tags", "NA"),
-            "product_id": product.get("id", "NA"),
-            "SKU": product.get("sku", "NA"),
+            "Name": product.get("name", ""),
+            "MRP": product.get("price", ""),
+            "SellingPrice": product.get("specialPrice", ""),
+            "Tags": product.get("tags", ""),
+            "product_id": product.get("id", ""),
+            "SKU": product.get("sku", ""),
             "product_link": f'https://www.apollopharmacy.in/otc/{product.get("urlKey", "")}?doNotTrack=true'
         }
         
