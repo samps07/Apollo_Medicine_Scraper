@@ -21,5 +21,5 @@ A CSV file named `scraped_medicines_data.csv` containing data for 70 available m
 
 ## NOTE 
 
-the scraper code makes use of a local authorization code to access website and may need to be changed as per the user and browser
+the scraper code makes use of a local authorization code to access website extracted from network tab of website, and may need to be changed as per the user and browser
 
