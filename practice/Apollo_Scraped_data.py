@@ -20,7 +20,7 @@ search_term="paracetamol" #assumed generic medicine
 pincode="560064" #assumed pincode
 page=1 #initial page
 
-while len(all_Medicines)<70:
+while len(all_Medicines)<=70:
     payload = {
         "query": search_term,
         "page": page,
