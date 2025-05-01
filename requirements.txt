@@ -1,2 +1,7 @@
-requests
-BeautifulSoup
+## 🛠️ Requirements
+- **Python**: Version 3.6 or higher.
+- **Libraries**:
+  - `requests`: For making HTTP requests to the API and product pages.
+  - `beautifulsoup4`: For parsing HTML content of product pages.
+  - `csv`: Built-in, for writing data to CSV.
+- **Internet Connection**: To access Apollo Pharmacy’s API and product pages.
