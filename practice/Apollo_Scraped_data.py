@@ -1,7 +1,7 @@
 import requests
 import csv
 import time
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup #required for coverting raw html content to searchable format
 
 # URL from network tab of Apollo website
 url = "https://search.apollo247.com/v3/fullSearch"
@@ -30,7 +30,7 @@ def scrape_product_details(product_url):
             soup = BeautifulSoup(response.text, 'html.parser') #converts the webpage’s HTML content (response.text) into a format that’s easy to search using BeautifulSoup, storing it in soup.
 
             # About Section
-            about_section = soup.find("div", id="About Product Web")
+            about_section = soup.find("div", id="About Product Web") #finds html data from soup corresponding to tag and id, extracted from page source
             product_details["About"] = (
                 about_section.find("div", class_="Yh").get_text(strip=True) 
                 if about_section and about_section.find("div", class_="Yh") else "N/A"
@@ -116,7 +116,7 @@ while len(all_Medicines) < 70:
             }
 
             product_details = scrape_product_details(med["product_link"])
-            med.update(product_details)
+            med.update(product_details) #adding product details from product page
             all_Medicines.append(med)
 
             if len(all_Medicines) >= 70:
